@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  flask-app:
+    image: testsql5:${IMAGE_TAG}  # Replace with the name of your Docker image
+    container_name: ${FLASK_CONTAINER_NAME}
+    ports:
+      - "3000:5000"
+    environment:
+      DATABASE_HOST: 
+      POSTGRES_DATABASE: 
+      POSTGRES_USERNAME: 
+      POSTGRES_PASSWORD: 
+      FLASK_CONTAINER_NAME: 
+    depends_on:
+      - postgres
+
+  postgres:
+    image: bitnami/postgresql:latest
+    environment:
+      POSTGRES_DATABASE: 
+      POSTGRES_USERNAME: 
+      POSTGRES_PASSWORD: 
+    ports:
+      - "5432:5432"
