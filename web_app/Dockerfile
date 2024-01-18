@@ -17,4 +17,4 @@ RUN pip install -r requirements.txt
 COPY web_app/flask_web_app.py flask_web_app.py
 
 #Start the application
-CMD ["python", "flask_web_app.py"]
+ENTRYPOINT ["python", "flask_web_app.py"]
