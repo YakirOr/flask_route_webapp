@@ -2,7 +2,7 @@ version: '3'
 
 services:
   flask-app:
-    image: testsql5:${IMAGE_TAG}  # Replace with the name of your Docker image
+    image: ${WEBAPP_IMAGE}  
     container_name: ${FLASK_CONTAINER_NAME}
     ports:
       - "3000:5000"
